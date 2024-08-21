@@ -108,6 +108,7 @@ public class Main {
     }
     public static void Jugar(){
         String matrizCartas[][] = crearMatrizCartas();
+        inicializarCartasJuego(matrizCartas);
         int totalJugador1 = obtenerCartas(matrizCartas);
         int totalJugador2 = obtenerCartas(matrizCartas);
         Ganador(totalJugador1,totalJugador2);
