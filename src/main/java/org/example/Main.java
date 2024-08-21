@@ -1,5 +1,5 @@
 package org.example;
-
+import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
@@ -9,11 +9,11 @@ public class Main {
         String cartas[][] = new String[12][2];
         return cartas;
     }
-    public static void agregarCartas(String nombreCartas,String puntaje){
+    public static void agregarCartas(String nombreCartas,String puntaje,String cartas[][]){
         for (int i = 0; i < crearMatrizCartas().length; i++) {
-            if (crearMatrizCartas()[i][0] == null ){
-                crearMatrizCartas()[i][0] = nombreCartas;
-                crearMatrizCartas()[i][1] = puntaje;
+            if (cartas[i][0] == null ){
+                cartas[i][0] = nombreCartas;
+                cartas[i][1] = puntaje;
                 break;
             }
         }
@@ -55,4 +55,20 @@ public class Main {
                 System.out.println("Opción no válida.");
         }
     }
+    public static void inicializarCartasJuego(){
+        agregarCartas("as", "11");
+        agregarCartas("dos", "2");
+        agregarCartas("tres", "3");
+        agregarCartas("cuatro", "4");
+        agregarCartas("cinco", "5");
+        agregarCartas("seis", "6");
+        agregarCartas("siete", "7");
+        agregarCartas("ocho", "8");
+        agregarCartas("nueve", "9");
+        agregarCartas("jota", "10");
+        agregarCartas("quina", "10");
+        agregarCartas("kaiser", "10");
+
+    }
+    public static int
 }
